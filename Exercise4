@@ -1,0 +1,22 @@
+public class l7ex4 {
+
+	public static void main(String[] args) {
+		StringBuilder s = new StringBuilder();
+		String s1 = " <<Я  длинное предложение Я второе  предложение.>> ";
+		s1 = s1.replace("  ", " ").trim();
+		String[] a = s1.split(" ");
+		for (int i = 0; i < a.length; i++) {
+			if (a[i].length() > 0) {
+				s.append(a[i]);
+
+				if ((i + 1 < a.length) && (a[i + 1].length() > 0)
+						&& Character.isUpperCase(a[i + 1].charAt(0))
+						&& (!a[i].endsWith("."))) {
+					s.append(". ");
+				} else
+					s.append(" ");
+			}
+		}
+		System.out.println(s1 + " ->  " + s.toString());
+	}
+}
