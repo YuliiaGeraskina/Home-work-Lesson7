@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class l7ex2 {
+
+static void wordsearch(String s,String n){
+String[] a = s.split(" ");
+int count=0;
+for (int i=0;i<a.length;i++){
+if (n.equalsIgnoreCase(a[i]))
+	count++;
+}
+
+System.out.println("Слово "+ n + " встречается в тексте "+ count + " раз(а)");
+return ;
+}
+
+
+public static void main(String[] args) {
+String s = "And what sort of man is Sherlock Holmes? We learn a lot about him from the stories in which he appears. He has a thin face and intelligent eyes. He speaks when he has something to say. He smokes a pipe (he has a collection of them).  He plays the violin.";
+System.out.println(s);
+System.out.println("Выберете слово из текста: ");
+Scanner sc = new Scanner(System.in);
+String n=  sc.next();
+sc.close();
+wordsearch(s,n);
+}
+}
