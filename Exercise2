@@ -3,6 +3,11 @@ import java.util.Scanner;
 public class l7ex2 {
 
 static void wordsearch(String s,String n){
+s=s.replace(".", " ");
+s=s.replace("(", " ");
+s=s.replace(")", " ");
+s=s.replace("?", " ");
+s=s.replace("!", " ");
 String[] a = s.split(" ");
 int count=0;
 for (int i=0;i<a.length;i++){
